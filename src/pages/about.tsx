@@ -5,7 +5,7 @@ function TermsPage() {
       <p>
         You&apos;re viewing the{" "}
         <a
-          href="https://headlessdropshipping.com/"
+          href=""
           title="Learn more about Headless Dropshipping"
           target="_blank"
           rel="noopener noreferrer"

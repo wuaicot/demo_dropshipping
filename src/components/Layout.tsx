@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <header className="py-6 md:py-12">
+      <header className="py-6 md:py-12 bg-cyan-500/10 rounded-br-lg">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center justify-between">
             <div className="md:w-1/3">
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
                     </svg>
                   </div>
                   <span className="text-lg font-medium">
-                    Headless Dropshipping Starter
+                    Products
                   </span>
                 </a>
               </Link>
@@ -102,6 +102,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </header>
+      <hr className='translate-x-9 bg-cyan-500/10 ' />
       <main className="py-6 md:py-12">
         <div className="max-w-6xl mx-auto px-6">{children}</div>
       </main>
@@ -110,23 +111,23 @@ const Layout = ({ children }) => {
           <p className="text-gray-600 text-sm">
             Powered by
             <a
-              href="https://headlessdropshipping.com"
+              href=""
               title="Learn more about how this site was made"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-0.5 text-gray-800 hover:text-blue-600"
+              className="ml-0.5 text-gray-800 hover:text-blue-600 animate-pulse"
             >
-              Headless Dropshipping Starter
+              WUAICOT
             </a>
             , Built by{" "}
             <a
-              href="https://twitter.com/notrab"
+              href="https://twitter.com/naiycol"
               title="Follow the creator on Twitter"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-0.5 text-gray-800 hover:text-blue-600"
+              className="ml-0.5 text-gray-800 hover:text-violet-700"
             >
-              @notrab
+              @naiycol
             </a>
           </p>
           <nav className="flex items-center justify-end space-x-3 md:space-x-6">
