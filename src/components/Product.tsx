@@ -64,19 +64,17 @@ const Product = ({ id, name, variants }: ProductProps) => {
     }).format(activeVariant?.retail_price || 0); // Proporcionar un valor por defecto
   }, [activeVariant]);
 
-  const addToWishlist = () => addItem({ id, name, variants }); // Usar useMemo para evitar recalculaciones innecesarias
+  const addToWishlist = () => addItem({ id, name }); // Usar useMemo para evitar recalculaciones innecesarias
 
   const onWishlist = useMemo(() => isSaved(id), [isSaved, id]);
 
   return (
     <article className="border border-gray-200 rounded bg-white flex flex-col relative">
-      {" "}
       <button
         aria-label="Add to wishlist"
         className="appearance-none absolute top-0 right-0 mt-3 mr-3 text-gray-300 focus:text-gray-500 hover:text-red-500 transition focus:outline-none"
-        onClick={addToWishlist}
-      >
-       {" "}
+        onClick={addToWishlist}>
+      
         {onWishlist ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +105,7 @@ const Product = ({ id, name, variants }: ProductProps) => {
         {" "}
         {activeVariantFile?.preview_url ? (
           <Image
-            src={activeVariantFile.preview_url}
+            src={activeVariantFile?.preview_url || ""}
             width={250}
             height={250}
             alt={`${activeVariant?.name || "Product"} ${name}`}
@@ -158,8 +156,9 @@ const Product = ({ id, name, variants }: ProductProps) => {
         {" "}
       </div>
       {" "}
-    </article>
-  );
-};
+        </article>
+      );
+    };
+  
 
 export default Product;

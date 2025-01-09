@@ -5,7 +5,7 @@ import useLocalStorage from "../hooks/useLocalStorage";
 import type { PrintfulProduct } from "../types";
 
 interface InitialState {
-  items: [];
+  items: PrintfulProduct[];
 }
 
 interface WishlistProviderState extends InitialState {
@@ -22,14 +22,17 @@ type Actions =
   | { type: typeof ADD_PRODUCT; payload: PrintfulProduct }
   | { type: typeof REMOVE_PRODUCT; payload: PrintfulProduct["id"] };
 
-export const WishlistStateContext = createContext(null);
-export const WishlistDispatchContext = createContext(null);
+export const WishlistStateContext = createContext<WishlistProviderState | undefined>(undefined);
+export const WishlistDispatchContext = createContext<{
+  addItem: (item: PrintfulProduct) => void;
+  removeItem: (id: PrintfulProduct["id"]) => void;
+} | undefined>(undefined);
 
 const initialState: InitialState = {
   items: [],
 };
 
-const reducer = (state: WishlistProviderState, { type, payload }: Actions) => {
+const reducer = (state: WishlistProviderState, { type, payload }: Actions): WishlistProviderState => {
   switch (type) {
     case ADD_PRODUCT:
       return { ...state, items: [...state.items, payload] };
@@ -50,7 +53,7 @@ export const WishlistProvider: React.FC<{ children?: React.ReactNode }> = ({
     "items-wishlist",
     JSON.stringify(initialState)
   );
-  const [state, dispatch] = useReducer(reducer, JSON.parse(savedWishlist));
+  const [state, dispatch] = useReducer<React.Reducer<WishlistProviderState, Actions>>(reducer, JSON.parse(savedWishlist));
 
   useEffect(() => {
     saveWishlist(JSON.stringify(state));
