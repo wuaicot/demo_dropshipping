@@ -3,7 +3,9 @@ import Link from "next/link";
 import useWishlistState from "../hooks/useWishlistState";
 import useSnipcartCount from "../hooks/useSnipcartCount";
 
-const Layout = ({ children }) => {
+import { ReactNode } from "react";
+
+const Layout = ({ children }: { children: ReactNode }) => {
   const { hasItems } = useWishlistState();
   const { cart } = useSnipcartCount();
   const cartHasItems = cart.items.count !== 0;

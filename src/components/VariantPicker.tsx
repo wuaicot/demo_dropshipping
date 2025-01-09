@@ -1,4 +1,14 @@
-const VariantPicker = ({ variants, ...props }) => {
+interface Variant {
+  external_id: string;
+  name: string;
+}
+
+interface VariantPickerProps {
+  variants: Variant[];
+  [key: string]: any;
+}
+
+const VariantPicker: React.FC<VariantPickerProps> = ({ variants, ...props }) => {
   if (variants.length === (0 || 1)) return null;
 
   return (
