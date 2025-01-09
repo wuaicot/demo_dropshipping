@@ -11,7 +11,7 @@ const initialState = {
   },
 };
 
-const reducer = (state, action) => {
+const reducer = (state: typeof initialState, action: { type: string; payload?: any }) => {
   switch (action.type) {
     case "SET":
       return {
