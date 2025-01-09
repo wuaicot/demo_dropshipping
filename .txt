@@ -1,0 +1,72 @@
+DEMO_DROPSHIPPING/
+├── .github/
+├── .next/
+├── .vscode/
+├── node_modules/
+├── public/
+├── src/
+├── .babelrc
+├── .env.local
+├── .env.local.example
+├── .eslintrc.json
+├── .gitignore
+├── .txt
+├── next-env.d.ts
+├── next-seo.config.ts
+├── next.config.js
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── prettier.config.js
+├── README.md
+├── renovate.json
+├── tailwind.config.js
+├── tsconfig.json
+
+------------------------------------------------------
+
+├── src/
+│   ├── components/
+│   │   ├── Hero.tsx
+│   │   ├── Layout.tsx
+│   │   ├── Product.tsx
+│   │   ├── ProductGrid.tsx
+│   │   └── VariantPicker.tsx
+│   ├── context/
+│   │   └── wishlist.tsx
+│   ├── hooks/
+│   │   ├── useLocalStorage.tsx
+│   │   ├── useSnipcartCount.tsx
+│   │   ├── useWishlistDispatch.ts
+│   │   └── useWishlistState.ts
+│   ├── lib/
+│   │   ├── calculate-taxes.ts
+│   │   ├── create-order.ts
+│   │   ├── fetch-shipping-rates.ts
+│   │   ├── format-variant-name.ts
+│   │   ├── has-snipcart.ts
+│   │   └── printful-client.ts
+│   └── pages/
+│       ├── api/
+│       │   ├── products/
+│       │   │   └── [id].ts
+│       │   └── snipcart/
+│       │       ├── shipping.ts
+│       │       ├── tax.ts
+│       │       └── webhook.ts
+│       ├── _app.tsx
+│       ├── _document.tsx
+│       └── about.tsx "
+
+
+      ♦♦♦Printful related files:
+ • src/lib/printful-client.ts
+ • src/pages/api/products/[id].ts
+ • src/components/Product.tsx
+ • src/components/ProductGrid.tsx 
+ • src/pages/_app.tsx
+ • src/pages/about.tsx
+
+      
+
+

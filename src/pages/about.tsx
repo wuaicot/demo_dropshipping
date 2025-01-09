@@ -12,12 +12,10 @@ function TermsPage() {
         >
           Headless Dropshipping Starter
         </a>{" "}
-        by Jamie Barton.
+        by Naycol R. Linares
       </p>
       <p>
-        Build your own Headless eCommerce storefront with Next.js and Snipcart,
-        and deliver swag powered by Printful. End to end commerce, styled using
-        TailwindCSS and deployed on Vercel.
+      &quot;Discover our dropshipping app: easy to use, connect with global suppliers, manage inventory, process orders automatically, and maximize your sales. Take your online business to the next level without the hassle.&quot;
       </p>
     </div>
   );
