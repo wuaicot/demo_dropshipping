@@ -1,2 +1,0 @@
-// types/printful-request.d.ts
-declare module 'printful-request';

@@ -12,8 +12,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
   return (
     <>
-      <header className="py-6 md:py-12 bg-cyan-500/10 rounded-br-lg">
-        <div className="max-w-6xl mx-auto px-6">
+      <header className="py-6 md:py-12  rounded-br-lg">
+        <div className="max-w-6xl mx-auto px-3 ">
           <div className="flex items-center justify-between">
             <div className="md:w-1/3">
               <nav className="flex items-center justify-start space-x-3 md:space-x-6">
@@ -24,7 +24,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
                 </Link>
                 <Link href="/terms-of-sale">
                   <a className="text-gray-800 hover:text-blue-600 p-1 transition">
-                    Terms of Sale
+                    Terms
                   </a>
                 </Link>
               </nav>
@@ -46,9 +46,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
                       />
                     </svg>
                   </div>
-                  <span className="text-lg font-medium">
-                    Products
-                  </span>
+                  <span className="text-lg font-medium">Products</span>
                 </a>
               </Link>
             </div>
@@ -72,7 +70,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
                   aria-label="Wishlist"
                 >
                   {hasItems && (
-                    <span className="absolute bg-red-500 rounded-full w-2 h-2 top-0 right-0 -mt-1 -mr-1"></span>
+                    <span className="absolute bg-red-600 rounded-full w-2 h-2 top-0 right-0 -mt-1 -mr-2 "></span>
                   )}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -85,11 +83,11 @@ const Layout = ({ children }: { children: ReactNode }) => {
                 </a>
               </Link>
               <button
-                className="snipcart-checkout appearance-none px-2 text-gray-800 hover:text-blue-600 rounded-md cursor-pointer focus:outline-none focus:text-blue-600 transition relative"
+                className="snipcart-checkout appearance-none px- text-blue-900 hover:text-blue-600 rounded-md cursor-pointer focus:outline-none focus:text-blue-600 transition relative"
                 aria-label="Cart"
               >
                 {cartHasItems && (
-                  <span className="absolute bg-blue-600 rounded-full w-2 h-2 top-0 right-0 -mt-1 -mr-1"></span>
+                  <span className="absolute bg-red-500 animate-pulse rounded-full w-2 h-2 top-0 right-0 -mt-1 -mr-1"></span>
                 )}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +102,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
           </div>
         </div>
       </header>
-      <hr className='translate-x-9 bg-cyan-500/10 ' />
+      <hr className="translate-x-9 bg-cyan-500/10 " />
       <main className="py-6 md:py-12">
         <div className="max-w-6xl mx-auto px-6">{children}</div>
       </main>
