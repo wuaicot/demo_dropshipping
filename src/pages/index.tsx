@@ -14,7 +14,7 @@ type IndexPageProps = {
 
 const IndexPage: React.FC<IndexPageProps> = ({ products }) => (
   <>
-    <div className=" text-justify p-2 md:pb-12 bg-blue-500/10 rounded-lg">
+    <div className=" text-justify py-2 md:pb-2 bg-blue-500/10 rounded-lg">
       <h1 className="text-xl md:text-3xl lg:text-5xl text-blue-950 text-center font-bold ">
         All Products
       </h1>
